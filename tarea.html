@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería El Tomebamba - Cuenca</title>
+    <style>
+        /* Estilos generales y colores */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf8f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Barra de navegación */
+        header {
+            background-color: #b22222; /* Rojo ladrillo tradicional */
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Sección Inicio (Hero) */
+        #inicio {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://unsplash.com') center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        #inicio h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        #inicio p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+
+        .boton {
+            background-color: #e67e22;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .boton:hover {
+            background-color: #d35400;
+        }
+
+        /* Contenedores de secciones */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2.titulo-seccion {
+            text-align: center;
+            color: #b22222;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Sección Menú */
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta-pizza {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #b22222;
+        }
+
+        .tarjeta-pizza h3 {
+            margin-top: 0;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .precio {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* Sección Nosotros */
+        #nosotros {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header>
+        <h1>🍕 Pizzería El Tomebamba</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN INICIO -->
+    <div id="inicio">
+        <h2>mi pizzeria en cuenca</h2>
+        <p>Masa madre horneada a la leña con los ingredientes más frescos del Austro ecuatoriano.</p>
+        <a href="#menu" class="boton">Ver Nuestro Menú</a>
+    </div>
+
+    <!-- SECCIÓN MENÚ -->
+    <section id="menu">
+        <h2 class="titulo-seccion">Nuestro Menú</h2>
+        <div class="grid-menu">
+            <div class="tarjeta-pizza">
+                <h3>La Cuencana <span class="precio">$12.50</span></h3>
+                <p>Salsa de tomate artesanal, queso mozzarella, chorizo cuencano ahumado, mote pillo crocante y un toque de cilantro.</p>
+            </div>
+            <div class="tarjeta-pizza">
+                <h3>Margarita del Barranco <span class="precio">$9.00</span></h3>
+                <p>La clásica italiana con salsa de tomate natural, mozzarella fresca, albahaca de huerto y aceite de oliva.</p>
+            </div>
+            <div class="tarjeta-pizza">
+                <h3>Pepperoni Especial <span class="precio">$11.00</span></h3>
+                <p>Abundante pepperoni americano, doble queso mozzarella y orégano fresco sobre masa crujiente.</p>
+            </div>
+            <div class="tarjeta-pizza">
+                <h3>4 Quesos Andinos <span class="precio">$13.00</span></h3>
+                <p>Fusión de queso mozzarella, parmesano, queso azul y queso maduro de hacienda local.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros">
+        <h2 class="titulo-seccion">Sobre Nosotros</h2>
+        <p>
+            Nacimos en el corazón de <strong>Cuenca, Ecuador</strong>, a pocos pasos del río Tomebamba. 
+            En <strong>Pizzería El Tomebamba</strong> combinamos las técnicas tradicionales de la pizza italiana a la leña 
+            con los sabores únicos y la calidez de la Atenas del Ecuador.
+        </p>
+        <p>
+            <strong>Ubicación:</strong> Calle Larga y Benigno Malo, Centro Histórico, Cuenca.<br>
+            <strong>Horario:</strong> Martes a Domingo de 12:00 a 22:00.
+        </p>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Pizzería El Tomebamba - Cuenca, Ecuador. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
